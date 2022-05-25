@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <base href="https://htmlacademy-htmlcss.github.io/2061793-sedona-34/2/">
+</head>
+  <body>
+    <header class="header">
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__list-item"><a class="navigation__list-link" href="#"><img class="navigation__logo" src="#" alt="Логотип «City of Sedona»"></a></li>
+          <li class="navigation__list-item"><a class="navigation__list-link" href="#">Главная</a></li>
+          <li class="navigation__list-item"><a class="navigation__list-link" href="#">О Седоне</a></li>
+          <li class="navigation__list-item"><a class="navigation__list-link navigation__list-link_current" href="#">Гостиницы</a></li>
+        </ul>
+        <ul class="navigation__user">
+          <li class="navigation__user-item"><a class="navigation__user-link" href="#"><span class="visually-hidden">Поиск</span></a></li>
+          <li class="navigation__user-item"><a class="navigation__user-link" href="#"><span class="visually-hidden">Избранное</span></a></li>
+          <li class="navigation__user-item"><a class="navigation__user-link" href="#"><span class="visually-hidden">Гостиницы</span></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-inner">
+      <section class="catalog-filter">
+        <h1 class="catalog-filter__title">Гостиницы Седоны</h1>
+        <ul class="catalog-filter__breadcrumbs">
+          <li class="catalog-filter__breadcrumbs-item"><a class="catalog-filter__breadcrumbs-item-link" href="#"><span class="visually-hidden">Главная</span></a></li>
+          <li class="catalog-filter__breadcrumbs-item"><a class="catalog-filter__breadcrumbs-item-link" href="#">Гостиницы</a></li>
+        </ul>
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="catalog-filter__group">
+            <legend class="catalog-filter__title">Инфраструктура:</legend>
+            <ul class="catalog-filter__checkbox-list">
+            <li class="catalog-filter__checkbox-item"><label class="catalog-filter__checkbox-title"><input class="catalog-filter__checkbox" type="checkbox" name="swimming-pool" checked>Бассейн</label></li>
+            <li class="catalog-filter__checkbox-item"><label class="catalog-filter__checkbox-title"><input class="catalog-filter__checkbox" type="checkbox" name="car-park" checked>Парковка</label></li>
+            <li class="catalog-filter__checkbox-item"><label class="catalog-filter__checkbox-title"><input class="catalog-filter__checkbox" type="checkbox" name="wi-fi">Wi-Fi</label></li>
+            </ul>
+          </fieldset>
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Тип жилья:</legend>
+            <ul class="catalog-filter__radio-list">
+              <li class="catalog-filter__radio-item"><label class="catalog-filter__radio-title"><input class="catalog-filter__radio" type="radio" name="hotel" checked>Гостиница</label></li>
+              <li class="catalog-filter__radio-item"><label class="catalog-filter__radio-title"><input class="catalog-filter__radio" type="radio" name="motel">Мотель</label></li>
+              <li class="catalog-filter__radio-item"><label class="catalog-filter__radio-title"><input class="catalog-filter__radio" type="radio" name="apartments">Апартаменты</label></li>
+              </ul>
+          </fieldset>
+          <button class="button" type="submit">Применить</button>
+          <button class="button" type="submit">Сбросить</button>
+        </form>
+      </section>
+
+    </main>
+  </body>
+</html>
