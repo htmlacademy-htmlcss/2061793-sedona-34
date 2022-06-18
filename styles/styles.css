@@ -14,10 +14,17 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 .page {
-  font-family: 'PT Sans';
+  font-family: 'PT Sans', sans-serif;
   width: 1200px;
+  min-height: 100%;
   margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation__logo {
@@ -93,6 +100,10 @@
 
 .visually-hidden {
   visibility: hidden;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .advantages {
@@ -447,4 +458,8 @@
 .subscription_catalog {
   color: #000000;
   background-image: none;
+}
+
+.main-inner {
+  flex-grow: 1;
 }
