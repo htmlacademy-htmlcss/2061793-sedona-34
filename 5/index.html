@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <base href="https://htmlacademy-htmlcss.github.io/2061793-sedona-34/5/">
+</head>
+  <body class="page">
+    <!--Блок header-->
+    <header class="header">
+      <nav class="navigation">
+        <a class="navigation__logo-link" href="#"><img class="navigation__logo" src="./images/header-logo.svg" width="139" height="70" alt="Логотип «City of Sedona»"></a>
+        <ul class="navigation__list">
+          <li class="navigation__list-item"><a class="navigation__list-link navigation__list-link_current" href="#">Главная</a></li>
+          <li class="navigation__list-item"><a class="navigation__list-link" href="#">О Седоне</a></li>
+          <li class="navigation__list-item"><a class="navigation__list-link" href="catalog.html">Гостиницы</a></li>
+        </ul>
+        <ul class="navigation__user">
+          <li class="navigation__user-item"><a class="navigation__user-link navigation__user-link_search" href="#"><span class="visually-hidden">Поиск</span></a></li>
+          <li class="navigation__user-item"><a class="navigation__user-link navigation__user-link_favorites" href="#"><span class="visually-hidden">Избранное</span></a></li>
+          <li class="navigation__user-item"><a class="navigation__user-link navigation__user-link_hotels" href="catalog.html">Хочу сюда!</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--Контентная часть страницы-->
+    <main class="main">
+      <!--Секция advantages-->
+      <section class="advantages">
+        <!-- <img class="advantages__image" src="./images/advantages-main.svg" width="458" height="352" lang="en" alt="Welcome to the gorgeus Sedona, because the Grand Canyon sucks!"> -->
+        <img class="advantages__background-image" src="./images/advantages-background.jpg" width="1200" height="485" alt="Каньон Седоны.">
+        <h1 class="advantages__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <h2 class="advantages__subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</h2>
+        <ul class="advantages__cards"> <!--Расположение контейнеров изменю при помощи grid layout-->
+          <li class="advantages__item advantages__item_background-dark-blue">
+            <h3 class="advantages__item-title">Настоящий городок</h3>
+            <p class="advantages__item-number">— №1 —</p>
+            <p class="advantages__item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          </li>
+          <li class="advantages__item advantages__item_background-dark-blue">
+            <h3 class="advantages__item-title">Там есть мост дьявола</h3>
+            <p class="advantages__item-number">— №2 —</p>
+            <p class="advantages__item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          </li>
+          <li class="advantages__item advantages__item_background-light-blue">
+            <h3 class="advantages__item-title">Небольшая площадь</h3>
+            <p class="advantages__item-number">— №3 —</p>
+            <p class="advantages__item-description">Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="advantages__item advantages__item_background-blue">
+            <h3 class="advantages__item-title">Красивая дорога</h3>
+            <p class="advantages__item-number">— №4 —</p>
+            <p class="advantages__item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="advantages__item advantages__item_background-light-blue">
+            <h3 class="advantages__item-title">Мало туристов</h3>
+            <p class="advantages__item-number">— №5 —</p>
+            <p class="advantages__item-description">Большинство едет в Гранд Каньон и толпится там</p>
+          </li>
+          <li class="advantages__item advantages__item_background-light-blue">
+            <img class="advantages__item-logo" src="./images/advantages-house.svg" width="75" height="72" alt="Дом.">
+            <h3 class="advantages__item-title">Жильё</h3>
+            <p class="advantages__item-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="advantages__item">
+            <img class="advantages__item-logo" src="./images/advantages-burger.svg" width="75" height="72" alt="Бургер.">
+            <h3 class="advantages__item-title">Еда</h3>
+            <p class="advantages__item-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li class="advantages__item advantages__item_background-light-blue">
+            <img class="advantages__item-logo" src="./images/advantages-present.svg" width="75" height="72" alt="Подарок.">
+            <h3 class="advantages__item-title">Сувениры</h3>
+            <p class="advantages__item-description">Не только китайского, но и настоящего местного производства!</p>
+          </li>
+          <li class="advantages__item"><img class="advantages__item-image" src="./images/advantages-canyon.jpg" width="800" height="384" alt="Большой каньон на территории национального парка «Гранд-Каньон»"></li>
+          <li class="advantages__item"><img class="advantages__item-image" src="./images/advantages-city.jpg" width="800" height="384" alt="Город Седона, штат Аризона"></li>
+        </ul>
+      </section>
+      <section class="offer">
+        <h2 class="offer__title">Заинтересовались?</h2>
+        <p class="offer__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="offer__link" href="catalog.html">поиск гостиницы в Седоне</a>
+      </section>
+      <section class="subscription">
+        <h2 class="subscription__title">Подпишитесь на рассылку</h2>
+        <p class="subscription__description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
+          <label for="subscription-email"></label>
+          <input class="subscription__form-field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
+          <button class="subscription__form-button" type="submit">Подписаться</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <ul class="footer__social-list">
+        <li class="footer__social-list-item"><a class="footer__social-list-link footer__social-list-link_vkontakte" href="https://vk.com/htmlacademy"><span class="visually-hidden">ВКонтакте</span></a></li>
+        <li class="footer__social-list-item"><a class="footer__social-list-link footer__social-list-link_telegram" href="https://t.me/htmlacademy"><span class="visually-hidden">Telegram</span></a></li>
+        <li class="footer__social-list-item"><a class="footer__social-list-link footer__social-list-link_youtube" href="https://www.youtube.com/user/htmlacademyru"><span class="visually-hidden">YouTube</span></a></li>
+      </ul>
+      <a class="footer__tel-link" href="#">+7 (812) 812-12-12</a>
+      <a class="footer__logo-link" href="https://htmlacademy.ru/"><img class="footer__logo" src="./images/footer-logo.svg" width="115" height="34" alt="Логотип «HTML Academy»"></a>
+    </footer>
+  </body>
+</html>
