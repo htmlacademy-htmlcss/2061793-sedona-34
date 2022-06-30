@@ -1,3 +1,4 @@
+/* Подключила шрифты */
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
@@ -18,13 +19,31 @@ html {
   height: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page {
   font-family: 'PT Sans', sans-serif;
-  width: 1200px;
+  width: 1200px; /*Перенести в каждый блок и удалить*/
   min-height: 100%;
-  margin: 0 auto 0 auto;
+  margin: 0 auto 0 auto; /*Перенести в каждый блок и удалить*/
   display: flex;
   flex-direction: column;
+}
+
+/* Ниже стили для блока header */
+.header {
+  width: 1200px;
+  margin: 0 auto 0 auto;
+  z-index: 1;
 }
 
 .navigation__logo {
@@ -47,6 +66,7 @@ html {
   list-style-type: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .navigation__list-item {
@@ -56,8 +76,19 @@ html {
 }
 
 .navigation__list-link {
+  position: relative;
   text-decoration: none;
   color: #000000;
+}
+
+.navigation__list-link_current::before {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background-color: #756157;
+  content: "";
 }
 
 .navigation__user {
@@ -68,39 +99,109 @@ html {
   flex-direction: row;
 }
 
+/* .navigation__user-item {
+  display: flex;
+  align-items: baseline;
+  margin-top: 20px;
+}
+
+.navigation__user-item:last-of-type {
+  margin-right: 70px;
+  margin-top: 14px;
+}
+
 .navigation__user-link {
   text-decoration: none;
   color: #000000;
+  position: relative;
+  width: 42px;
 }
 
-.navigation__user-link_search {
-  width: 18px;
-  height: 18px;
+.navigation__user-link-search {
   background-image: url(../images/header-search.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  width: 100%;
+  height: 100%;
 }
 
-.navigation__user-link_favorites {
-  background-image: url(../images/header-favorite.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+.navigation__user-item:nth-of-type(2) {
+  margin-right: 20px;
+}
+
+.navigation__user-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.navigation__user-item_hotels {
+  width: 160px;
+  height: 37px;
+  background-color: #756157;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation__user-link_hotels {
   font-size: 16px;
   line-height: 1.25;
-  background-color: #756157;
-  border-radius: 4px;
   color: #FFFFFF;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}*/
+
+.navigation__user {
+  display: flex;
+  align-items: center;
 }
 
-.visually-hidden {
-  visibility: hidden;
+.navigation__list-item {
+  min-width: 42px;
 }
+
+.navigation__user-link {
+  position: relative;
+}
+
+.navigation__user-link-search {
+  background-image: url(../images/header-search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.navigation__user-link-favorites {
+  background-image: url(../images/header-favorite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+}
+
+.navigation__user-link-hotels {
+  display: inline-block;
+  padding: 8px 34px;
+  background-color: #756157;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
 
 .main {
   flex-grow: 1;
@@ -124,7 +225,8 @@ html {
 .advantages__image {
   position: absolute;
   z-index: 1;
-  margin: 51px auto 0 auto;
+  top: 51px;
+  margin: 0 auto 0 auto;
   left: 0;
   right: 0;
 }
@@ -149,7 +251,7 @@ html {
   margin-bottom: 90px;
 }
 
-.advantages__cards {
+/* .advantages__cards {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -221,7 +323,96 @@ html {
   font-size: 18px;
   line-height: 1.17;
   text-align: center;
+} */
+
+.advantages__item-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
 }
+
+.advantages__item-description {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.advantages__item-logo {
+  margin-bottom: 30px;
+}
+
+.advantages__unordered-list {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advantages__unordered-item {
+  min-height: 384px;
+  flex-grow: 1;
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages__ordered-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.advantages__figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages__item {
+  min-height: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.advantages__item_color_dark-blue {
+  background-color: #82B3D3;
+  color: #FFFFFF;
+}
+
+.advantages__item_color_grey-blue {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages__item_color_grey {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .offer {
   display: flex;
@@ -247,10 +438,18 @@ html {
   text-align: center;
 }
 
-.offer__link {
+.offer__link-decoration {
   width: 574px;
   height: 60px;
   margin-bottom: 93px;
+  background-color: #756157;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer__link {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.8;
@@ -258,17 +457,17 @@ html {
   text-decoration: none;
   text-align: center;
   color: #FFFFFF;
-  background-color: #756157;
-  border-radius: 4px;
 }
 
 .subscription {
+  min-height: 411px;
   margin-bottom: 45px;
   background-image: url(../images/subscription-background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: #FFFFFF;
+
 }
 
 .subscription__title {
@@ -304,6 +503,10 @@ html {
   padding: 0;
   display: flex;
   flex-direction: row;
+}
+
+.footer__social-list-link {
+
 }
 
 .footer__social-list-link_vkontakte {
