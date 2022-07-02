@@ -1,4 +1,4 @@
-/* Подключила шрифты */
+/* Ниже подключение шрифтов */
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
@@ -32,17 +32,56 @@ html {
 
 .page {
   font-family: 'PT Sans', sans-serif;
-  width: 1200px; /*Перенести в каждый блок и удалить*/
+  background-color: #E5E5E5;
   min-height: 100%;
-  margin: 0 auto 0 auto; /*Перенести в каждый блок и удалить*/
+  margin: 0;
+}
+
+.page-wrapper {
+  width: 1200px;
+  margin: 0 auto 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
 }
 
+/* Ниже стили для разных состояний коричневых кнопок */
+.button__color_brown:hover {
+  background-color: #615048;
+}
+
+.button__color_brown:focus {
+  background-color: #615048;
+}
+
+.button__color_brown:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button__color_brown:disabled {
+  background-color: #E5E5E5;
+}
+
+/* Ниже стили для разных состояний синих кнопок */
+.button__color_blue:hover {
+  background-color: #68A2CA;
+}
+
+.button__color_blue:focus {
+  background-color: #68A2CA;
+}
+
+.button__color_blue:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button__color_blue:disabled {
+  background-color: #E5E5E5;
+}
+
 /* Ниже стили для блока header */
 .header {
-  width: 1200px;
-  margin: 0 auto 0 auto;
   z-index: 1;
 }
 
@@ -97,94 +136,61 @@ html {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-}
-
-/* .navigation__user-item {
-  display: flex;
-  align-items: baseline;
-  margin-top: 20px;
-}
-
-.navigation__user-item:last-of-type {
-  margin-right: 70px;
-  margin-top: 14px;
-}
-
-.navigation__user-link {
-  text-decoration: none;
-  color: #000000;
-  position: relative;
-  width: 42px;
-}
-
-.navigation__user-link-search {
-  background-image: url(../images/header-search.svg);
-  width: 100%;
-  height: 100%;
-}
-
-.navigation__user-item:nth-of-type(2) {
-  margin-right: 20px;
-}
-
-.navigation__user-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
-
-.navigation__user-item_hotels {
-  width: 160px;
-  height: 37px;
-  background-color: #756157;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.navigation__user-link_hotels {
-  font-size: 16px;
-  line-height: 1.25;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  text-align: center;
-  width: 100%;
-}*/
-
-.navigation__user {
-  display: flex;
-  align-items: center;
-}
-
-.navigation__list-item {
-  min-width: 42px;
-}
-
-.navigation__user-link {
-  position: relative;
+  flex-wrap: wrap;
 }
 
 .navigation__user-link-search {
   background-image: url(../images/header-search.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 18px 18px;
+  background-size: 19px 19px;
+  display: block;
+  width: 42px;
+  height: 66px;
 }
 
 .navigation__user-link-favorites {
   background-image: url(../images/header-favorite.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 18px 18px;
+  text-decoration: none;
+  background-size: 19px 19px;
+  display: block;
+  width: 42px;
+  height: 66px;
+  margin-right: 21px;
+  position: relative;
+}
+
+.navigation__user-link-count-container {
+  position: absolute;
+  top: 15px;
+  right: -2px;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: #7DB54F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.navigation__user-link-count {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.3;
+  letter-spacing: -0.1em;
+  text-align: center;
+  color: #FFFFFF;
 }
 
 .navigation__user-link-hotels {
   display: inline-block;
   padding: 8px 34px;
+  margin-top: 14px;
+  margin-right: 70px;
   background-color: #756157;
   border-radius: 4px;
   font-size: 16px;
@@ -196,13 +202,7 @@ html {
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
+/* Ниже стили для секции advantages */
 .main {
   flex-grow: 1;
 }
@@ -220,6 +220,21 @@ html {
 .advantages__background-image {
   display: block;
   margin-bottom: 63px;
+  position: relative;
+}
+
+.advantages__background-image::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 57px;
+  bottom: 0;
+  width: 1200px;
+  height: 57px;
+  z-index: 10;
+  background-image: url(../images/advantages-background-decoration.svg);
 }
 
 .advantages__image {
@@ -413,7 +428,7 @@ html {
 
 
 
-
+/* Ниже стили для блока offer */
 .offer {
   display: flex;
   flex-direction: column;
@@ -438,28 +453,24 @@ html {
   text-align: center;
 }
 
-.offer__link-decoration {
-  width: 574px;
-  height: 60px;
+.offer__link {
+  padding: 12px 149px;
   margin-bottom: 93px;
   background-color: #756157;
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.offer__link {
+  color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.8;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  color: #FFFFFF;
 }
 
+/* Ниже стили для блока subscription */
 .subscription {
+  width: 1200px;
+  margin: 0 auto 0 auto;
   min-height: 411px;
   margin-bottom: 45px;
   background-image: url(../images/subscription-background.jpg);
@@ -467,7 +478,9 @@ html {
   background-position: center;
   background-size: cover;
   color: #FFFFFF;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subscription__title {
@@ -483,7 +496,8 @@ html {
 
 .subscription__description {
   width: 475px;
-  margin: 0 auto 46px auto;
+  margin: 0;
+  margin-bottom: 46px;
   font-size: 22px;
   line-height: 1.18;
   text-align: center;
@@ -491,46 +505,61 @@ html {
 
 .subscription__form {
   padding-bottom: 94px;
+  display: flex;
 }
 
+.subscription__form-field {
+  padding: 0;
+  padding-left: 22px;
+  width: calc(600px - 22px);
+  height: 60px;
+  background-color: #F2F2F2;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.subscription__form-button {
+  padding: 0;
+  width: 200px;
+  height: 60px;
+  background-color: #82B3D3;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.8;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Ниже стили для блока footer */
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .footer__social-list {
   list-style-type: none;
+  margin-left: 70px;
+  margin-right: 41px;
   padding: 0;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
 
-.footer__social-list-link {
-
-}
-
-.footer__social-list-link_vkontakte {
-  background-image: url(../images/social-vkontakte.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.footer__social-list-link_telegram {
-  background-image: url(../images/social-telegram.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.footer__social-list-link_youtube {
-  background-image: url(../images/social-youtube.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+.footer__social-list-item {
+  width: 47px;
+  height: 40px;
 }
 
 .footer__tel-link {
+  width: 720px;
   text-decoration: none;
   color: #000000;
   font-size: 40px;
@@ -538,6 +567,27 @@ html {
   text-align: center;
   text-transform: uppercase;
 }
+
+.footer__logo-link {
+  margin-right: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .catalog-filter {
   background-image: url(../images/catalog-filter-background.jpg);
