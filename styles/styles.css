@@ -558,6 +558,8 @@ html {
 
 
 
+
+
 .catalog-filter {
   background-image: url(../images/catalog-filter-background.jpg);
   background-repeat: no-repeat;
@@ -595,13 +597,6 @@ html {
 
 .catalog-filter__radio-list {
   list-style-type: none;
-}
-
-.hotels-search__number {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 1.2;
-  text-transform: uppercase;
 }
 
 .hotels-search__list {
@@ -653,18 +648,153 @@ html {
   background-color: #F2F2F2;
 }
 
-.hotels-search__pagination {
+.subscription_catalog {
+  color: #000000;
+  background-image: none;
+}
+
+.main-inner {
+  flex-grow: 1;
+}
+
+
+
+
+/* Ниже стили для секции hotels-search */
+.hotels-search__sorting-container {
+  max-width: 1057px;
+  margin: 55px auto 56px auto;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hotels-search__number {
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.hotels-search__sorting {
+  display: block;
+  width: 290px;
+  margin-left: auto;
+  margin-right: 79px;
+  padding: 12px 100px 12px 20px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-image: url(../images/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  appearance: none;
+}
+
+.hotels-search__view-selection-container {
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  gap: 8px;
+}
+
+.hotels-search__view-selection-cards {
+  background-image: url(../images/View-icon-cards.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 14px;
+  display: block;
+  padding: 15px 14px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.hotels-search__view-selection-big-cards {
+  background-image: url(../images/View-icon-big-cards.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 14px;
+  display: block;
+  padding: 15px 14px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.hotels-search__view-selection-list {
+  background-image: url(../images/View-icon-list.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 16px;
+  height: 14px;
+  display: block;
+  padding: 15px 14px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+}
+
+.hotels-search__view-selection:hover {
+  border: 2px solid #000000;
+}
+
+.hotels-search__view-selection:focus {
+  border: 2px solid #68A2CA;
+}
+
+.hotels-search__view-selection:active {
+  border: 2px solid #000000;
+}
+
+/* Стили для карточек гостиниц */
+.hotels-search__list {
+  max-width: 1057px;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 0 18px;
+}
+
+.hotels-search__list-item {
+
+}
+
+/* Стили для пагинации  */
+.hotels-search__pagination-container {
+  max-width: 1056px;
+  padding-top: 28px;
+  margin: 0 auto 25px auto;
+  border-top: 1px solid #E6E6E6;;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotels-search__pagination {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+  gap: 8px;
 }
 
 .hotels-search__pagination-item {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.8;
   border-radius: 4px;
   background-color: #82B3D3;
   color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hotels-search__pagination-item:first-of-type {
@@ -675,13 +805,21 @@ html {
 .hotels-search__amount {
   font-size: 18px;
   line-height: 1.17;
+  margin-right: 53px;
+  margin-left: auto;
+  align-self: center;
 }
 
-.subscription_catalog {
-  color: #000000;
-  background-image: none;
-}
-
-.main-inner {
-  flex-grow: 1;
+.hotels-search__amount-select {
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  padding: 14px 126px 11px 18px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  background-image: url(../images/select-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  appearance: none;
+  align-self: center;
 }
