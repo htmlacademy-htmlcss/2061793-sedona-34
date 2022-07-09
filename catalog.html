@@ -41,7 +41,7 @@
             <li class="catalog-filter__checkbox-item"><label class="catalog-filter__checkbox-label"><input class="catalog-filter__checkbox visually-hidden" type="checkbox" name="wi-fi"><span class="catalog-filter__checkbox-control-mark"></span><span class="catalog-filter__checkbox-title">Wi-Fi</span></label></li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter__group">
+          <fieldset class="catalog-filter__group catalog-filter__group-type">
             <legend class="catalog-filter__subtitle">Тип Жилья:</legend>
             <ul class="catalog-filter__radio-list">
               <li class="catalog-filter__radio-item"><label class="catalog-filter__radio-label"><input class="catalog-filter__radio visually-hidden" type="radio" name="hotel" checked><span class="catalog-filter__radio-control-mark"></span><span class="catalog-filter__radio-title">Гостиница</span></label></li>
@@ -51,18 +51,17 @@
           </fieldset>
           <fieldset class="catalog-filter__group">
             <label class="catalog-filter__subtitle" for="cost">Стоимость, ₽:</label>
-            <!-- <input class="catalog-filter-group__cost-range" type="range" min="0" max="9000" step="100" id="cost" name="cost"> -->
             <div class="catalog-filter-inputs-container">
               <label class="catalog-filter-input-label">
-               <input class="catalog-filter-input catalog-filter-input-min-price" type="number" value="0" name="min-price"><span class="catalog-filter-input-text">от</span>
+               <input class="catalog-filter-input catalog-filter-input-min-price" type="number" value="0" name="min-price" id="cost"><span class="catalog-filter-input-text"></span>
               </label>
               <label class="catalog-filter-input-label">
-               <input class="catalog-filter-input catalog-filter-input-max-price" type="number" value="9000" name="max-price"><span class="catalog-filter-input-text">до</span>
+               <input class="catalog-filter-input catalog-filter-input-max-price" type="number" value="9000" name="max-price"><span class="catalog-filter-input-text"></span>
               </label>
          </div>
             <div class="catalog-filter__range">
               <div class="catalog-filter__range-scale">
-                <div class="catalog-filter__range-bar">
+                <div class="catalog-filter__range-bar" style="left: 0; width: 227px">
                   <button class="catalog-filter__range-toggle catalog-filter__range-toggle-min"><span class="visually-hidden">Изменить минимальную цену.</span></button>
                   <button class="catalog-filter__range-toggle catalog-filter__range-toggle-max"><span class="visually-hidden">Изменить максимальную цену.</span></button>
                 </div>
@@ -102,7 +101,7 @@
         <ul class="hotels-search__list">
           <li class="hotels-search__list-item">
             <div class="hotels-search__list-item-container">
-            <img class="hotels-search__list-item-image" src="./images/hotel-amara-resort.jpg" width="300" height="211" atl="Отель Amara Resort & Spa.">
+            <img class="hotels-search__list-item-image" src="./images/hotel-amara-resort.jpg" width="300" height="211" alt="Отель Amara Resort & Spa.">
             <h2 class="hotels-search__list-item-title">Amara Resort & Spa</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 4000 ₽</span>
@@ -119,7 +118,7 @@
           </li>
           <li class="hotels-search__list-item">
             <div class="hotels-search__list-item-container">
-            <img class="hotels-search__list-item-image" src="./images/hotel-villas-at-poco-diablo.jpg" width="300" height="211" atl="Отель Villas at Poco Diablo.">
+            <img class="hotels-search__list-item-image" src="./images/hotel-villas-at-poco-diablo.jpg" width="300" height="211" alt="Отель Villas at Poco Diablo.">
             <h2 class="hotels-search__list-item-title">Villas at Poco Diablo</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 5000 ₽</span>
@@ -136,7 +135,7 @@
           </li>
           <li class="hotels-search__list-item">
             <div class="hotels-search__list-item-container">
-            <img class="hotels-search__list-item-image" src="./images/hotel-desert-quail-inn.jpg" width="300" height="211" atl="Отель Desert Quail Inn.">
+            <img class="hotels-search__list-item-image" src="./images/hotel-desert-quail-inn.jpg" width="300" height="211" alt="Отель Desert Quail Inn.">
             <h2 class="hotels-search__list-item-title">Desert Quail Inn</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 2500 ₽</span>
@@ -152,7 +151,7 @@
           </li>
           <li class="hotels-search__list-item">
             <div class="hotels-search__list-item-container">
-            <img class="hotels-search__list-item-image" src="./images/hotel-greentree-inn.jpg" width="300" height="211" atl="Отель GreenTree Inn.">
+            <img class="hotels-search__list-item-image" src="./images/hotel-greentree-inn.jpg" width="300" height="211" alt="Отель GreenTree Inn.">
             <h2 class="hotels-search__list-item-title">GreenTree Inn</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 1500 ₽</span>
@@ -168,12 +167,12 @@
         </ul>
         <div class="hotels-search__pagination-container">
         <ul class="hotels-search__pagination">
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" hraf="#">1</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" hraf="#">2</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" hraf="#">3</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" hraf="#">4</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" hraf="#">...</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" hraf="#">10</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">1</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">2</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">3</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">4</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">...</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">10</a></li>
         </ul>
         <span class="hotels-search__amount">Гостиниц на странице:</span>
         <select class="hotels-search__amount-select" aria-label="Колличество пунктов на странице">
