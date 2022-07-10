@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="shortcut icon" href="./images/favicon.png" >
   </head>
   <body class="page">
     <div class="page-wrapper">
@@ -29,7 +30,14 @@
         <div class="catalog-filter-container">
         <h1 class="catalog-filter__title">Гостиницы Седоны</h1>
         <ul class="catalog-filter__breadcrumbs">
-          <li class="catalog-filter__breadcrumbs-item"><a class="catalog-filter__breadcrumbs-item-link-main" href="#"><span class="visually-hidden">Главная</span></a></li>
+          <li class="catalog-filter__breadcrumbs-item">
+            <a class="catalog-filter__breadcrumbs-item-link-main" href="#">
+            <svg  aria-hidden="true" focusable="false" width="13" height="13" viewbox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.15625 6.1499L6.15625 0.649902L12.1562 6.1499V12.3499H0.15625V6.1499ZM1.15625 6.5499V11.3499H11.1562V6.5499L6.15625 2.0499L1.15625 6.5499ZM5.15625 10.3499H4.15625V6.84985H8.15625V10.3499H7.15625V7.84985H5.15625V10.3499Z" fill="white"/>
+            </svg>
+            <span class="visually-hidden">Главная</span>
+          </a>
+        </li>
           <li class="catalog-filter__breadcrumbs-item"><a class="catalog-filter__breadcrumbs-item-link-hotels" href="#">Гостиницы</a></li>
         </ul>
         <form class="catalog-form" action="https://echo.htmlacademy.ru/" method="get">
@@ -70,7 +78,7 @@
              </div>
           </fieldset>
           <div class="catalog-filter-button-container">
-          <button class="catalog-filter-button-apply" type="submit">Применить</button>
+          <button class="catalog-filter-button-apply button__color_blue" type="submit">Применить</button>
           <button class="catalog-filter-button-reset" type="submit">Сбросить</button>
         </div>
         </form>
@@ -80,7 +88,7 @@
       <section class="hotels-search">
         <div class="hotels-search__sorting-container">
         <p class="hotels-search__number">Найдено гостиниц: 38</p>
-        <select class="hotels-search__sorting" aria-label="Сортировка">
+        <select class="hotels-search__sorting select-style" aria-label="Сортировка">
           <option value="popular">Сначала популярное</option>
           <option value="cheap" selected>Сначала дешёвые</option>
           <option value="expensive">Сначала дорогое</option>
@@ -105,8 +113,8 @@
             <h2 class="hotels-search__list-item-title">Amara Resort & Spa</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 4000 ₽</span>
-            <a class="hotels-search__list-item-detail" href="#">подробнее</a>
-            <a class="hotels-search__list-item-favorites" href="#">в избранное</a>
+            <a class="hotels-search__list-item-detail button__color_brown" href="#">подробнее</a>
+            <a class="hotels-search__list-item-favorites button__color_blue" href="#">в избранное</a>
             <ul class="hotels-search__list-item-stars-container">
               <li class="hotels-search__list-item-star"></li>
               <li class="hotels-search__list-item-star"></li>
@@ -122,8 +130,8 @@
             <h2 class="hotels-search__list-item-title">Villas at Poco Diablo</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 5000 ₽</span>
-            <a class="hotels-search__list-item-detail" href="#">подробнее</a>
-            <a class="hotels-search__list-item-favorites" href="#">в избранном</a>
+            <a class="hotels-search__list-item-detail button__color_brown" href="#">подробнее</a>
+            <a class="hotels-search__list-item-favorites button__color_green" href="#">в избранном</a>
             <ul class="hotels-search__list-item-stars-container">
               <li class="hotels-search__list-item-star"></li>
               <li class="hotels-search__list-item-star"></li>
@@ -139,8 +147,8 @@
             <h2 class="hotels-search__list-item-title">Desert Quail Inn</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 2500 ₽</span>
-            <a class="hotels-search__list-item-detail" href="#">подробнее</a>
-            <a class="hotels-search__list-item-favorites" href="#">в избранное</a>
+            <a class="hotels-search__list-item-detail button__color_brown" href="#">подробнее</a>
+            <a class="hotels-search__list-item-favorites button__color_blue" href="#">в избранное</a>
             <ul class="hotels-search__list-item-stars-container">
               <li class="hotels-search__list-item-star"></li>
               <li class="hotels-search__list-item-star"></li>
@@ -155,8 +163,8 @@
             <h2 class="hotels-search__list-item-title">GreenTree Inn</h2>
             <span class="hotels-search__list-item-type">Гостиница</span>
             <span class="hotels-search__list-item-price">От 1500 ₽</span>
-            <a class="hotels-search__list-item-detail" href="#">подробнее</a>
-            <a class="hotels-search__list-item-favorites" href="#">в избранное</a>
+            <a class="hotels-search__list-item-detail button__color_brown" href="#">подробнее</a>
+            <a class="hotels-search__list-item-favorites button__color_blue" href="#">в избранное</a>
             <ul class="hotels-search__list-item-stars-container">
               <li class="hotels-search__list-item-star"></li>
               <li class="hotels-search__list-item-star"></li>
@@ -167,15 +175,15 @@
         </ul>
         <div class="hotels-search__pagination-container">
         <ul class="hotels-search__pagination">
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">1</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">2</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">3</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">4</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">...</a></li>
-          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link" href="#">10</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link hotels-search__pagination-item-active" href="#">1</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link button__color_blue" href="#">2</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link button__color_blue" href="#">3</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link button__color_blue" href="#">4</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link button__color_blue" href="#">...</a></li>
+          <li class="hotels-search__pagination-item"><a class="hotels-search__pagination-link button__color_blue" href="#">10</a></li>
         </ul>
         <span class="hotels-search__amount">Гостиниц на странице:</span>
-        <select class="hotels-search__amount-select" aria-label="Колличество пунктов на странице">
+        <select class="hotels-search__amount-select select-style" aria-label="Колличество пунктов на странице">
           <option value="one">1</option>
           <option value="two">2</option>
           <option value="three">3</option>
@@ -189,7 +197,7 @@
         <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="subscription-email"></label>
           <input class="subscription__form-field" placeholder="Ваш e-mail" type="email" name="subscription-email" id="subscription-email" required>
-          <button class="subscription__form-button" type="submit">Подписаться</button>
+          <button class="subscription__form-button  button__color_blue" type="submit">Подписаться</button>
         </form>
       </section>
       </main>

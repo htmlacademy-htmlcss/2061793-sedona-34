@@ -64,6 +64,10 @@ html {
 }
 
 /* Ниже стили для разных состояний синих кнопок */
+.button__color_blue {
+  background-color: #82B3D3;
+}
+
 .button__color_blue:hover {
   background-color: #68A2CA;
 }
@@ -77,6 +81,49 @@ html {
 }
 
 .button__color_blue:disabled {
+  background-color: #E5E5E5;
+}
+
+/* Ниже стили для разных состояний зеленых кнопок */
+.button__color_green {
+  background-color: #7DB54F;
+}
+
+.button__color_green:hover {
+  background-color: #6C9E42;
+}
+
+.button__color_green:focus {
+  background-color: #6C9E42;
+}
+
+.button__color_green {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Ниже общие стили для селектов */
+.select-style:hover {
+  border: 2px solid #68A2CA;
+  box-sizing: border-box;
+}
+
+.select-style:focus {
+  border: 2px solid #68A2CA;
+  box-sizing: border-box;
+}
+
+.select-style:active {
+  border: 2px solid #3F5E72;
+  box-sizing: border-box;
+}
+
+.select-style:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.button__color_green:disabled {
   background-color: #E5E5E5;
 }
 
@@ -220,20 +267,15 @@ html {
 .advantages__background-image {
   display: block;
   margin-bottom: 63px;
-  position: relative;
 }
 
-.advantages__background-image::after {
+.advantages::after {
   content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 57px;
-  bottom: 0;
   width: 1200px;
   height: 57px;
-  z-index: 10;
+  position: absolute;
+  top: calc(485px - 56px);
+  left: 0;
   background-image: url(../images/advantages-background-decoration.svg);
 }
 
@@ -721,7 +763,7 @@ html {
   font-size: 16px;
   line-height: 1.25;
   text-transform: uppercase;
-  background-color: #82B3D3;
+  /* background-color: #82B3D3; */
   border-radius: 4px;
   color: #FFFFFF;
   text-decoration: none;
@@ -755,6 +797,7 @@ html {
   text-transform: uppercase;
   background-color: #F2F2F2;
   padding: 9px 0 9px 24px;
+  border-radius: 4px;
 }
 
 /* Стили для пагинации  */
@@ -776,26 +819,23 @@ html {
   gap: 8px;
 }
 
-.hotels-search__pagination-item {
+.hotels-search__pagination-link {
+  display: block;
+  box-sizing: border-box;
   width: 60px;
   height: 60px;
-  box-sizing: border-box;
+  padding-top: 11px;
+  text-align: center;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.8;
-  border-radius: 4px;
+  color: #ffffff;
   background-color: #82B3D3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hotels-search__pagination-link {
+  border-radius: 4px;
   text-decoration: none;
-  color: #FFFFFF;
 }
 
-.hotels-search__pagination-item:first-of-type {
+.hotels-search__pagination-item-active {
   background-color: #F2F2F2;
   color: #000000;
 }
@@ -856,14 +896,12 @@ html {
   display: flex;
 }
 
-.catalog-filter__breadcrumbs-item-link-main {
-  background-image: url(../images/advantages-main.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin-right: 15px;
+.catalog-filter__breadcrumbs-item-link-main:hover {
+  opacity: 0.6;
+}
+
+.catalog-filter__breadcrumbs-item-link-main:active {
+  opacity: 0.6;
 }
 
 .catalog-filter__breadcrumbs-item-link-hotels {
@@ -872,6 +910,15 @@ html {
   color: #FFFFFF;
   text-decoration: none;
   position: relative;
+  margin-left: 27px;
+}
+
+.catalog-filter__breadcrumbs-item-link-hotels:hover {
+  opacity: 0.6;
+}
+
+.catalog-filter__breadcrumbs-item-link-hotels:active {
+  opacity: 0.6;
 }
 
 .catalog-filter__breadcrumbs-item-link-hotels::before {
@@ -938,15 +985,16 @@ html {
   left: -38px;
   background-color: #FFFFFF;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .catalog-filter__checkbox-control-mark:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.catalog-filter__checkbox-control-mark:focus {
+.catalog-filter__checkbox:focus + .catalog-filter__checkbox-control-mark {
   background-color: rgba(255, 255, 255, 0.6);
-  border: 3px solid #83B3D3;
+  box-shadow: 0 0 0 3px #83B3D3;
 }
 
 .catalog-filter__checkbox-control-mark:active {
@@ -1004,13 +1052,12 @@ html {
   border-radius: 50%;
 }
 
-.catalog-filter__radio-control-mark:focus {
-  box-sizing: border-box;
-  border: 3px solid #83B3D3;
+.catalog-filter__radio:focus + .catalog-filter__radio-control-mark {
+  box-shadow: inset 0 0 0 3px #83B3D3;
 }
 
-.catalog-filter__radio-control-mark:checked {
-  border: 3px solid #83B3D3;
+.catalog-filter__radio:checked:focus + .catalog-filter__radio-control-mark {
+  box-shadow: 0 0 0 3px #83B3D3;
 }
 
 .catalog-filter__radio:checked + .catalog-filter__radio-control-mark::before {
@@ -1055,6 +1102,18 @@ html {
   cursor: pointer;
 }
 
+.catalog-filter__range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.catalog-filter__range-toggle:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.catalog-filter__range-toggle:active {
+  box-shadow: 0 0 0 2px #83B3D3,0 7px 15px rgba(0, 0, 0, 0.4);
+}
+
 .catalog-filter__range-toggle-min {
   left: 0;
   top: -8px;
@@ -1081,8 +1140,21 @@ html {
   width: 100%;
   padding: 0;
   font: inherit;
+  font-size: 18px;
+  line-height: 21px;
   color: #ffffff;
   background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.catalog-filter-input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-input:active {
+  background-color: #756257;
+  box-shadow: none;
+  outline: none;
   border: 2px solid #ffffff;
 }
 
@@ -1097,8 +1169,12 @@ html {
   background-position: right 14px center;
 }
 
+.catalog-filter-input-min-price:focus {
+  outline: solid 3px #81B3D2;
+  box-shadow: inset 0 0 0 3px #81B3D2;
+}
+
 .catalog-filter-input-max-price {
-  /* padding: 13px 0 11px 11px; */
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
   border-left: 1px solid #ffffff;
@@ -1107,6 +1183,11 @@ html {
   background-image: url("../images/input-to.svg");
   background-repeat: no-repeat;
   background-position: right 14px center;
+}
+
+.catalog-filter-input-max-price:focus {
+  outline: solid 3px #81B3D2;
+  box-shadow: inset 0 0 0 3px #81B3D2;
 }
 
 .catalog-filter-input-text {
@@ -1137,6 +1218,7 @@ html {
   line-height: 20px;
   padding: 14px 34px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .catalog-filter-button-reset {
@@ -1146,4 +1228,18 @@ html {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
+  cursor: pointer;
+}
+
+.catalog-filter-button-reset:hover {
+  opacity: 0.6;
+}
+
+.catalog-filter-button-reset:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.catalog-filter-button-reset:active {
+  opacity: 0.3;
 }
