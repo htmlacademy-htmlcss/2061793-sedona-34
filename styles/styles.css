@@ -637,7 +637,7 @@ html {
 }
 
 .hotels-search__view-selection-cards {
-  background-image: url(../images/View-icon-cards.svg);
+  background-image: url(../images/view-icon-cards.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;
@@ -649,7 +649,7 @@ html {
 }
 
 .hotels-search__view-selection-big-cards {
-  background-image: url(../images/View-icon-big-cards.svg);
+  background-image: url(../images/view-icon-big-cards.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;
@@ -661,7 +661,7 @@ html {
 }
 
 .hotels-search__view-selection-list {
-  background-image: url(../images/View-icon-list.svg);
+  background-image: url(../images/view-icon-list.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 16px;
@@ -1281,6 +1281,20 @@ html {
   cursor: pointer;
 }
 
+.popup__close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.popup__close-button:focus {
+  background-color: #E6E6E6;
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.popup__close-button:focus {
+  background-color: #E6E6E6;
+  opacity: 0.3;
+}
+
 .popup__form-label {
   font-weight: 700;
   font-size: 20px;
@@ -1306,6 +1320,19 @@ html {
   font-size: 18px;
   line-height: 21px;
   color: #000000;
+}
+
+.popup__input:hover {
+  background-color: #E6E6E6;
+}
+
+.popup__input:focus {
+  box-shadow: 0 0 0 3px #83B3D3;
+}
+
+.popup__input:active {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 2px #000000;
 }
 
 .popup__input::placeholder {
@@ -1380,15 +1407,57 @@ html {
 }
 
 .button-minus {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 23px;
+  top: 13px;
   left: 13px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.button-minus:hover {
+  opacity: 1;
+}
+
+.button-minus:focus {
+  opacity: 1;
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-minus:active {
+  opacity: 0.2;
 }
 
 .button-plus {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 17px;
+  top: 13px;
   right: 13px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.button-plus:hover {
+  opacity: 1;
+}
+
+.button-plus:focus {
+  opacity: 1;
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-plus:active {
+  opacity: 0.2;
 }
 
 .popup-counter-container {
@@ -1406,6 +1475,7 @@ html {
 .container-children {
   width: 230px;
   margin-left: auto;
+  position: relative;
 }
 
 .popup-counters-container {
@@ -1422,7 +1492,81 @@ html {
   line-height: 36px;
   text-transform: uppercase;
   color: #FFFFFF;
+  background-color: #83B3D3;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.popup__button:hover {
+  background-color: #68A2CA;
+}
+
+.popup__button:focus {
+  box-shadow: 0 0 0 3px #756257;
+}
+
+.popup__button:active {
+  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.popup__tooltip-toggle {
+  display: block;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  left: 53px;
+}
+
+.popup__tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: #83B3D3;
+}
+
+.popup__tooltip-toggle:hover .popup__tooltip-icon {
+  fill: #68A2CA;
+  cursor: pointer;
+}
+
+.popup__tooltip-text {
+  width: 216px;
+  padding: 15px 18px 22px 22px;
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: none;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  top: 55px;
+  left: -62px;
+  z-index: 1;
+  display: none;
+}
+
+.popup__tooltip-toggle:hover + .popup__tooltip-text,
+.popup__tooltip-toggle:focus + .popup__tooltip-text {
+  display: block;
+}
+
+.popup__tooltip-text:after {
+  content:'';
+  background-image: url("../images/tootlip-triangle.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
