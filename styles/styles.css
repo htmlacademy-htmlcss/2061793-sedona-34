@@ -1241,9 +1241,9 @@ html {
   align-items: center;
 }
 
-/* .popup_close {
+.popup_close {
   display: none;
-} */
+}
 
 .popup__container {
   width: 715px;
